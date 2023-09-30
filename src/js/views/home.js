@@ -11,9 +11,10 @@ export const Home = () => {
 	return(
 		<div className="text-center mt-5">
 			<h1>Home</h1>	
-			<h2>Desde FLux</h2>		
-			{store.naves.map( (item) => <Nave key={item.uid} uid={item.uid} name={item.name} model={item.model}/>   )}
-
+			<h2>Desde FLux</h2>	
+			<div className="row flex-row flex-nowrap" style={{ overflowX: "auto"}}>
+			{store.naves.map( (item) => <Nave key={item.uid} uid={item.uid} name={item.name} model={item.model}/>   )}	
+			</div>
 		</div>
 	)
 };
